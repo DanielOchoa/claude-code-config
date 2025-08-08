@@ -25,9 +25,35 @@ This repository serves as a single source of truth for Claude Code configuration
 - **web-research-specialist**: Researches current documentation, libraries, and best practices from the web. Provides up-to-date technical information with proper sources and implementation examples.
 
 ### Other Features
+- **Custom Statusline**: Enhanced statusline display showing current model and directory
 - **Project Instructions**: CLAUDE.md configurations for context and behavior
 - **Custom prompts and templates**: (Coming soon)
 - **Hooks**: (Coming soon)
+
+## Statusline Display
+
+This configuration includes a custom statusline that displays the current Claude model and working directory:
+
+![Claude Code Statusline](assets/claude-code-statusline.png)
+
+The statusline shows:
+- Current model name (e.g., `[Claude 3.5 Sonnet]`)
+- Directory indicator 📁 with current folder name
+
+## Prerequisites
+
+Before using this configuration, ensure you have the following tools installed:
+
+- **jq**: JSON processor required for statusline parsing
+  ```bash
+  # macOS with Homebrew
+  brew install jq
+  
+  # Ubuntu/Debian
+  sudo apt-get install jq
+  
+  # Other systems: https://github.com/jqlang/jq/releases
+  ```
 
 ## How to Use
 
