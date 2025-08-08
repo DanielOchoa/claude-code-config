@@ -36,10 +36,6 @@ This configuration includes a custom statusline that displays the current Claude
 
 ![Claude Code Statusline](assets/claude-code-statusline.png)
 
-The statusline shows:
-- Current model name (e.g., `[Claude 3.5 Sonnet]`)
-- Directory indicator 📁 with current folder name
-
 ## Prerequisites
 
 Before using this configuration, ensure you have the following tools installed:
@@ -48,31 +44,45 @@ Before using this configuration, ensure you have the following tools installed:
   ```bash
   # macOS with Homebrew
   brew install jq
-  
+
   # Ubuntu/Debian
   sudo apt-get install jq
-  
+
   # Other systems: https://github.com/jqlang/jq/releases
   ```
 
-## How to Use
+## Installation
 
-### 1. Clone this repository
+### Quick Install (Recommended)
+
+1. Clone this repository:
 ```bash
+git clone <your-repo-url> ai-dev-tools-config
+cd ai-dev-tools-config
+```
+
+2. Run the install script:
+```bash
+./install.sh
+```
+
+This will symlink the `.claude` directory to `~/.claude`, making it your global Claude Code configuration.
+
+### Manual Installation
+
+If you prefer manual setup:
+
+```bash
+# Clone the repository
 git clone <your-repo-url> ~/.ai-dev-tools-config
+
+# Create symlink to make it your global config
+ln -sf ~/.ai-dev-tools-config/.claude ~/.claude
 ```
 
-### 2. Link configurations to your projects
-```bash
-# Link the entire .claude directory
-ln -s ~/.ai-dev-tools-config/.claude /path/to/your/project/.claude
+## Usage
 
-# Or copy specific files
-cp ~/.ai-dev-tools-config/.claude/CLAUDE.md /path/to/your/project/.claude/
-cp -r ~/.ai-dev-tools-config/.claude/agents /path/to/your/project/.claude/
-```
-
-### 3. Customize for specific projects
+### Customization for specific projects
 - Override specific settings by creating local configuration files
 - Use project-specific branches for different configuration sets
 - Maintain a base configuration that works across most projects
